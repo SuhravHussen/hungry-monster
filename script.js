@@ -4,15 +4,14 @@ const mealDetailsContent = document.querySelector('.meal-details-content');
 const recipeCloseBtn = document.getElementById('recipe-close-btn');
 
 // event listeners
-searchBtn.addEventListener('click', getMealList);
-mealList.addEventListener('click', getMealRecipe);
+searchBtn.addEventListener('click', MealList);
 recipeCloseBtn.addEventListener('click', () => {
     mealDetailsContent.parentElement.classList.remove('showRecipe');
 });
 
 
-// get meal list that matches with the ingredients
-function getMealList(){
+// get meal list By Input
+function MealList(){
     let searchInputTxt = document.getElementById('search-input').value.trim();
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInputTxt}`)
     .then(response => response.json())
@@ -44,15 +43,13 @@ function getMealList(){
 
 // get recipe of the meal
 function getMealRecipe(id){
-  console.log('clicked')
 fetch('https://www.themealdb.com/api/json/v1/1/lookup.php?i='+id)
   .then(response => response.json())
-  .then(json => mealRecipeModal(json.meals))
+  .then(json =>mealIngredients(json.meals))
 }
 
 // create a modal
-function mealRecipeModal(meal){
-    console.log(meal);
+function mealIngredients(meal){
     meal = meal[0];
     let html = `
      <div class = "recipe-meal-img">

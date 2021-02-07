@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -27,6 +27,7 @@ body{
     font-size: 3rem;
     margin-bottom: 1rem;
     color: rgb(134, 190, 49);
+    font-family: 'New Rocker', cursive;
 }
 /*  */
 .container{
@@ -42,7 +43,6 @@ body{
 .meal-search{
     margin: 2rem 25%;
 }
-
 .meal-search-box{
     margin: 1.2rem 0;
     display: flex;
@@ -66,9 +66,9 @@ body{
     color: #70a027;
 }
 .search-btn{
-    width: 55px;
+    width: 124px;
     height: 55px;
-    font-size: 1.8rem;
+    font-size: 23px;
     background: #70a027;
     color: #fff;
     border: none;
@@ -76,7 +76,6 @@ body{
     border-bottom-right-radius: 2rem;
     
 }
-
 .meal-result{
     margin-top: 4rem;
 }
@@ -128,7 +127,6 @@ ul{
 .showRecipe{
     display: block;
 }
-
 .meal-details-content{
     margin: 2rem;
 }
@@ -154,7 +152,6 @@ ul{
     letter-spacing: 3px;
     padding-top: 3rem;
 }
-
 .recipe-instruct{
     padding: 1rem 0;
 }
@@ -168,43 +165,8 @@ ul{
 /*  */
 .notFound{
     grid-template-columns: 1fr!important;
-    color: var(--tenne-tawny);
+    color: red;
     font-size: 1.8rem;
     font-weight: 600;
     width: 100%;
 }
-
-
-
-
-
-
-/* Media Queries */
-/* @media screen and (min-width: 600px){
-    .meal-search-box{
-        width: 540px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media screen and (min-width: 768px){
-    #meal{
-        display: grid;
-        flex-grow: ;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-    .meal-item{
-        margin: 0;
-    }
-    .meal-details{
-        width: 700px;
-    }
-}
-
-@media screen and (min-width: 992px){
-    #meal{
-        grid-template-columns: repeat(3, 1fr);
-    }
-} */
