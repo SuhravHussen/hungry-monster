@@ -33,14 +33,14 @@ body{
     min-height: 100vh;
 }
 .meal-wrapper{
-    max-width: 1280px;
+    width: 70%;
     margin: 0 auto;
     padding: 2rem;
     background: #fff;
     text-align: center;
 }
 .meal-search{
-    margin: 2rem 0;
+    margin: 2rem 25%;
 }
 
 .meal-search-box{
@@ -83,13 +83,16 @@ body{
 #meal{
     margin: 2.4rem 0;
     display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
-.meal-item{
+.meal-item {
+    width: 25%;
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
-    margin: 2rem 0;
-
+    box-shadow: 0 20px 13px -10px rgb(0 0 0 / 74%);
+    margin: 2rem 2%;
+    text-align: center;
 }
 .meal-img img{
     width: 100%;
@@ -111,7 +114,7 @@ body{
     color: #fff;
     background: #70a027;
     border-radius: 1rem;
-    width: 90%;
+    width: 30%;
     height: 90%;
     overflow-y: scroll;
     display: none;
