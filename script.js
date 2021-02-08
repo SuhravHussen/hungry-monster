@@ -50,7 +50,9 @@ fetch('https://www.themealdb.com/api/json/v1/1/lookup.php?i='+id)
 
 // create a modal
 function mealIngredients(meal){
-    meal = meal[0];
+   
+     meal = meal[0]
+     console.log(meal)
     let html = `
      <div class = "recipe-meal-img">
             <img src = "${meal.strMealThumb}" alt = "">
@@ -60,17 +62,21 @@ function mealIngredients(meal){
         <div class = "recipe-instruct">
             <h3>ingredients:</h3>
            <ul>
-           <li>${meal.strIngredient1}</li>
-           <li>${meal.strIngredient2}</li>
-           <li>${meal.strIngredient3}</li>
-           <li>${meal.strIngredient4}</li>
-           <li>${meal.strIngredient5}</li>
-           <li>${meal.strIngredient6}</li>
-           <li>${meal.strIngredient7}</li>
-           <li>${meal.strIngredient8}</li>
-           <li>${meal.strIngredient9}</li>
-           <li>${meal.strIngredient10}</li>
+           <li>${meal.strMeasure1} ${meal.strIngredient1}</li>
+           <li>${meal.strMeasure2} ${meal.strIngredient2}</li>
+           <li>${meal.strMeasure3} ${meal.strIngredient3}</li>
+           <li>${meal.strMeasure4} ${meal.strIngredient4}</li>
+           <li>${meal.strMeasure5} ${meal.strIngredient5}</li>
+           <li>${meal.strMeasure6} ${meal.strIngredient6}</li>
+           <li>${meal.strMeasure7} ${meal.strIngredient7}</li>
+           <li>${meal.strMeasure8} ${meal.strIngredient8}</li>
+           <li>${meal.strMeasure9} ${meal.strIngredient9}</li>
+           <li>${meal.strMeasure10} ${meal.strIngredient10}</li>
            </ul>
+           </br>
+           </br>
+           <h3>How To Make:</h3>
+           <p>${meal.strInstructions}</p>
         </div>
     `;
     
